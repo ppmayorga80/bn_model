@@ -13,8 +13,7 @@ you must install GraphViz and configure it in your computer in order to run bn_m
 	#Population
 4. Click “Run” and wait
 5. Click “Show Graph”
-6. If you want to manually improve the graph, click on “Improve Graph” and write
-	the Bayesian Network by your self Aij=1 if there is a connection from variable i 
+6. If you want to manually improve the graph, click on “Improve Graph” and manually write the Bayesian Network m, i.e.  Aij=1 if there is a connection from variable i 
 	to variable j
 
 Creating your own dataset:
@@ -22,12 +21,11 @@ Creating your own dataset:
 	for example 20 independent samples of two coins and a dice>2
 		x=randi([0 1],20,1)';
 		y=randi([0 1],20,1)';
-		z=randi([0 5],20,1)'>1;
+		z=randi([1 6],20,1)'>2;
 		bn_dataset=[x;y;z]';
 	2. Set nodenames (n items)
 		bn_nodenames={'Tail','Head','Dice>1'};
 		bn_nodeshortnames={'T','H','D'};
 	
-	3. save 3 variables to a file
-	save('bn_dataset_HeadTailx20.mat','bn_dataset','bn_nodenames','bn_nodeshortnames')
-
+	3. save the 3 variables into a file
+		save('bn_dataset_HeadTailx20.mat','bn_dataset','bn_nodenames','bn_nodeshortnames')
