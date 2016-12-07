@@ -1,0 +1,33 @@
+author: Pedro Mayorga
+date: Nov, 2016
+
+main program: bn_model.m
+
+you must install GraphViz and configure it in your computer in order to run bn_model.m
+
+1. Click “Load Data Set” and select a mat file e.g. “bn_dataset lacoperon.mat”
+2. Click “Learn Bayesian Network” (this open a new window)
+3. In the new window, configure the parameters:
+	Fitness Function
+	#Generations
+	#Population
+4. Click “Run” and wait
+5. Click “Show Graph”
+6. If you want to manually improve the graph, click on “Improve Graph” and write
+	the Bayesian Network by your self Aij=1 if there is a connection from variable i 
+	to variable j
+
+Creating your own dataset:
+	1. Create your matrix of 0’s and 1’s (m rows, n columns)
+	for example 20 independent samples of two coins and a dice>2
+		x=randi([0 1],20,1)';
+		y=randi([0 1],20,1)';
+		z=randi([0 5],20,1)'>1;
+		bn_dataset=[x;y;z]';
+	2. Set nodenames (n items)
+		bn_nodenames={'Tail','Head','Dice>1'};
+		bn_nodeshortnames={'T','H','D'};
+	
+	3. save 3 variables to a file
+	save('bn_dataset_HeadTailx20.mat','bn_dataset','bn_nodenames','bn_nodeshortnames')
+

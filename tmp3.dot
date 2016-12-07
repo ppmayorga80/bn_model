@@ -1,0 +1,10 @@
+digraph G {
+	center=1;
+	size="20,20";
+	1 [label = "Tail"];
+	2 [label = "Head"];
+	3 [label = "Dice>1"];
+	2 -> 1 [label="-0.1",penwidth=2,color="#FF0000"];
+	3 -> 1 [label="-0.5",penwidth=6,color="#FF0000"];
+	3 -> 2 [label="0.0",penwidth=1,color="#FF0000"];
+}
