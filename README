@@ -13,7 +13,7 @@ you must install GraphViz and configure it in your computer in order to run bn_m
 	#Population
 4. Click “Run” and wait
 5. Click “Show Graph”
-6. If you want to manually improve the graph, click on “Improve Graph” and manually write the Bayesian Network m, i.e.  Aij=1 if there is a connection from variable i 
+6. If you want to manually improve the graph, click on “Improve Graph” and manually write the Bayesian Network, i.e.  Aij=1 if there is a connection from variable i 
 	to variable j
 
 Creating your own dataset:
